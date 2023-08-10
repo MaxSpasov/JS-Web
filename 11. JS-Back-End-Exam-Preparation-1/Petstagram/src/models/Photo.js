@@ -27,7 +27,10 @@ const photoSchema = new mongoose.Schema({
     },
     comments: [
         {
-            userId: mongoose.Types.ObjectId,
+            userId: {
+                type: mongoose.Types.ObjectId,
+                required: true,
+            },
             message: {
                 type: String,
                 required: [true, 'Comment message is required'],
