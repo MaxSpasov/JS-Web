@@ -35,7 +35,7 @@ const server = http.createServer(async (req, res) => {
             Object.keys(cat).reduce((result, key) => {
                 result = result.replace(`{{${key}}}`, cat[key]);
 
-                return result
+                return result;
             }, catHtml)
         );
         const homeResult = homeHtml.replace('{{cats}}', catsHtml);
